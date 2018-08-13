@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Vertices.h"
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
+    //@autoreleasepool {
+        VerticesCollection* testColl = [[VerticesCollection alloc] init];
+        [testColl AddVertex:@"FirstVertex"];
+        [testColl AddVertex:@"SecondVertex"];
+        [testColl AddVertex:@"ThirdVertex"];
+        [testColl AddVertex:@"FourthVertex"];
+        [testColl AddChild:@"FirstVertex" second:@"FirstVertexChild"];
+        [testColl Print];
+    //}
     return 0;
 }

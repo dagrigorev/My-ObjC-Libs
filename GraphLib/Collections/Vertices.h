@@ -20,7 +20,7 @@
 /**
  Vertices stored here
  */
-@property (strong, nonatomic) NSDictionary<NSString*, VerticesCollection*> *_verticesCollection;
+@property (strong, nonatomic) NSMutableDictionary<NSString*, VerticesCollection*> *_verticesCollection;
 
 /**
  Initialize empty dictionary of vertices
@@ -37,6 +37,7 @@
  */
 - (bool) AddVertex:(NSString*)vertex_id;
 
+- (bool) AddChild:(NSString*)vertex_id second:(NSString*)child_id;
 
 /**
  Remove vertex with same id
@@ -54,6 +55,8 @@
  @return <#return value description#>
  */
 - (bool) Contains:(NSString*)vertex_id;
+
+-(void) Print;
 
 /**
  Get count of vertices
