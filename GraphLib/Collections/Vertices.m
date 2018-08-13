@@ -9,30 +9,34 @@
 #import <Foundation/Foundation.h>
 #import "Vertices.h"
 
-@implementation VerticesCollection:NSObject
+@implementation VerticesCollection: NSObject
 
 -(id) init{
     if(self = [super init])
     {
-        // TODO: Init here
-        __verticesCollection = [NSDictionary dictionary];
+        __verticesCollection = [__verticesCollection init];
     }
     return self;
 }
 
 -(bool) AddVertex:(NSString *)vertex_id{
-    // TODO: implement vertex add method
-    return true;
+    bool contains = [__verticesCollection objectForKey:vertex_id] != nil;
+    if(!contains)
+        [__verticesCollection setValue:[VerticesCollection init] forKey:vertex_id];
+    return contains;
 }
 
 -(bool) RemoveVertex:(NSString *)vertex_id{
-    // TODO: implement vertex remove method
-    return true;
+    [__verticesCollection removeValueAtIndex:0 fromPropertyWithKey:vertex_id];
+    return ![self Contains:vertex_id];
 }
 
--(int) Count{
-    // TODO: implement count property
-    return 0;
+-(bool) Contains:(NSString *)vertex_id
+{
+    return [__verticesCollection objectForKey:vertex_id] != nil;
 }
 
+-(NSUInteger) Count{
+    return [__verticesCollection count];
+}
 @end

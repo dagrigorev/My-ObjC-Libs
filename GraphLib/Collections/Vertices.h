@@ -11,8 +11,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VerticesCollection: NSObject
 
+/**
+ Коллекция для хранения вершин графов
+ */
+@interface VerticesCollection: NSObject
 
 /**
  Vertices stored here
@@ -24,7 +27,7 @@
 
  @return <#return value description#>
  */
--(id)init;
+-(id) init;
 
 /**
  Add vertex with same id
@@ -32,7 +35,7 @@
  @param vertex_id vertex name (NSString type)
  @return true - if added successfully, false - otherwise
  */
-- (bool)AddVertex:(NSString*)vertex_id;
+- (bool) AddVertex:(NSString*)vertex_id;
 
 
 /**
@@ -41,14 +44,22 @@
  @param vertex_id vertex name (NSString* type)
  @return true - if removed successfully, false - otherwise
  */
-- (bool)RemoveVertex:(NSString*)vertex_id;
+- (bool) RemoveVertex:(NSString*)vertex_id;
 
+
+/**
+ Checks that specified value stored in collection
+
+ @param vertex_id <#vertex_id description#>
+ @return <#return value description#>
+ */
+- (bool) Contains:(NSString*)vertex_id;
 
 /**
  Get count of vertices
  @return count of vertices in collection (int type)
  */
-- (int)Count;
+- (NSUInteger) Count;
 @end
 
 #endif /* Vertices_h */
