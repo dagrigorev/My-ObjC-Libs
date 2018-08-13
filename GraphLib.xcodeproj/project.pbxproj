@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B20FCFF02121DC600091B569 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B20FCFEF2121DC600091B569 /* main.m */; };
+		B20FCFFA2121DED80091B569 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20FCFF92121DED80091B569 /* Foundation.framework */; };
+		B20FCFFC2121DF210091B569 /* Vertices.m in Sources */ = {isa = PBXBuildFile; fileRef = B20FCFFB2121DF210091B569 /* Vertices.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		B20FCFEC2121DC600091B569 /* GraphLib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GraphLib; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20FCFEF2121DC600091B569 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B20FCFF72121DDE20091B569 /* Vertices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertices.h; sourceTree = "<group>"; };
+		B20FCFF92121DED80091B569 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B20FCFFB2121DF210091B569 /* Vertices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vertices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20FCFFA2121DED80091B569 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				B20FCFEE2121DC600091B569 /* GraphLib */,
 				B20FCFED2121DC600091B569 /* Products */,
+				B20FCFF82121DED80091B569 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +64,27 @@
 		B20FCFEE2121DC600091B569 /* GraphLib */ = {
 			isa = PBXGroup;
 			children = (
+				B20FCFF62121DD750091B569 /* Collections */,
 				B20FCFEF2121DC600091B569 /* main.m */,
 			);
 			path = GraphLib;
+			sourceTree = "<group>";
+		};
+		B20FCFF62121DD750091B569 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				B20FCFF72121DDE20091B569 /* Vertices.h */,
+				B20FCFFB2121DF210091B569 /* Vertices.m */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		B20FCFF82121DED80091B569 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B20FCFF92121DED80091B569 /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20FCFFC2121DF210091B569 /* Vertices.m in Sources */,
 				B20FCFF02121DC600091B569 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
